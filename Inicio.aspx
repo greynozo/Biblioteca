@@ -23,8 +23,8 @@
                     <td>
                         <asp:TextBox TextMode="Number" ID="txtAño" runat="server"> </asp:TextBox></td>
                     <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ErrorMessage="El nombre es obligatior" Text="*" ForeColor="Red" ControlToValidate="txtAño" runat="server" />
-                        <asp:RangeValidator ID="RangeValidator1" ControlToValidate="txtAño" Type="Integer" MinimumValue="1" MaximumValue="100" runat="server" ForeColor="Red" ErrorMessage="El año debe ser mayor a 1 y menor a 100"></asp:RangeValidator>
+                <%--        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ErrorMessage="El nombre es obligatior" Text="*" ForeColor="Red" ControlToValidate="txtAño" runat="server" />
+                        <asp:RangeValidator ID="RangeValidator1" ControlToValidate="txtAño" Type="Integer" MinimumValue="1" MaximumValue="100" runat="server" F--%>oreColor="Red" ErrorMessage="El año debe ser mayor a 1 y menor a 100"></asp:RangeValidator>
                     </td>
                 </tr>
                 <tr>
@@ -75,6 +75,7 @@
             </table>
 
             <br />
+            <asp:Label ID="lblMensaje" Text="" runat="server" />
             <asp:ValidationSummary ForeColor="Red" ID="ValidationSummary1" runat="server" />
             <asp:Button ID="btnEnviar" Text="Enviar" runat="server" OnClick="btnEnviar_Click" CssClass="btn-success" />
         </form>

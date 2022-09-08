@@ -221,10 +221,12 @@
     <Content Include="Contenido\scss\style.scss" />
     <Content Include="Inicio.aspx" />
     <Content Include="L.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Vista.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\ControladorAlta.cs" />
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -239,6 +241,13 @@
     <Compile Include="L.aspx.designer.cs">
       <DependentUpon>L.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Maestra.Master.cs">
       <DependentUpon>Maestra.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -247,6 +256,7 @@
       <DependentUpon>Maestra.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\ServicioAlta.cs" />
     <Compile Include="Vista.aspx.cs">
       <DependentUpon>Vista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -343,6 +353,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Datos\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
