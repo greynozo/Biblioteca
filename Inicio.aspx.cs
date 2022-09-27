@@ -20,7 +20,6 @@ namespace Biblioteca
                 if (Session["Usuario"].ToString() == string.Empty)
                     Response.Redirect("Login.aspx");
             }
-        
         }
 
         protected void btnEnviar_Click(object sender, EventArgs e)

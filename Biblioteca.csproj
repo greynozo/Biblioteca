@@ -53,6 +53,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -79,6 +80,7 @@
     <Content Include="Contenido\css\style.css" />
     <Content Include="Contenido\fonts\.DS_Store" />
     <Content Include="Contenido\images\.DS_Store" />
+    <Content Include="Contenido\images\editar.png" />
     <Content Include="Contenido\images\logo.jpg" />
     <Content Include="Contenido\js\.DS_Store" />
     <Content Include="Contenido\js\bootstrap.min.js" />
@@ -222,11 +224,17 @@
     <Content Include="Inicio.aspx" />
     <Content Include="L.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Modificar.aspx" />
     <Content Include="Vista.aspx" />
+    <Content Include="Vista2.aspx" />
+    <Content Include="Vista3.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\ControladorAlta.cs" />
+    <Compile Include="Controlador\ControladorModificar.cs" />
+    <Compile Include="Controlador\ControladorVista.cs" />
+    <Compile Include="Controlador\ControladorVista3.cs" />
     <Compile Include="Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -255,14 +263,38 @@
     <Compile Include="Maestra.Master.designer.cs">
       <DependentUpon>Maestra.Master</DependentUpon>
     </Compile>
+    <Compile Include="Modificar.aspx.cs">
+      <DependentUpon>Modificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modificar.aspx.designer.cs">
+      <DependentUpon>Modificar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicios\ServicioAlta.cs" />
+    <Compile Include="Servicios\ServicioModificar.cs" />
+    <Compile Include="Servicios\ServicioVista.cs" />
+    <Compile Include="Servicios\ServicioVista3.cs" />
     <Compile Include="Vista.aspx.cs">
       <DependentUpon>Vista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Vista.aspx.designer.cs">
       <DependentUpon>Vista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista2.aspx.cs">
+      <DependentUpon>Vista2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista2.aspx.designer.cs">
+      <DependentUpon>Vista2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista3.aspx.cs">
+      <DependentUpon>Vista3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vista3.aspx.designer.cs">
+      <DependentUpon>Vista3.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
