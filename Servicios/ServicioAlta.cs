@@ -26,6 +26,7 @@ namespace Biblioteca.Servicios
                     SqlCommand command = new SqlCommand(script, connection);
 
                     int filas = command.ExecuteNonQuery();
+                    //Comentario
 
                     connection.Close();
 
