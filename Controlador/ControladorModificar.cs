@@ -9,13 +9,15 @@ namespace Biblioteca.Controlador
 {
     public class ControladorModificar
     {
-        public static SqlDataReader BuscarLibro(string id)
+        public static ClaseLibro BuscarLibro(string id)
         {
-            SqlDataReader reader = null;
+            //SqlDataReader reader = null;
 
-            reader = ServicioModificar.DatosBD(id);
+            ClaseLibro libro = new ClaseLibro();
+            
+            libro = ServicioModificar.DatosBD(id);
 
-            return reader;
+            return libro;
         }
     }
 }

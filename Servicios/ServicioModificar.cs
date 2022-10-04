@@ -11,12 +11,14 @@ namespace Biblioteca.Servicios
     {
         private static string Cadena = ConfigurationManager.ConnectionStrings["Cadena"].ConnectionString;
 
-        public static SqlDataReader DatosBD (string id)
+        public static ClaseLibro DatosBD (string id)
         {
             using (SqlConnection connection = new SqlConnection(Cadena))
             {
                 try
                 {
+                    ClaseLibro libro = new ClaseLibro();
+
                     string script = "SELECT * FROM LIBROS WHERE ID= " + id;
 
                     connection.Open();
@@ -25,9 +27,21 @@ namespace Biblioteca.Servicios
 
                     SqlDataReader reader = command.ExecuteReader();
 
+
+                    while(reader.Read())
+                    {
+                        libro.ID = reader.GetInt32(0);
+                        libro.Autor = reader.GetString(1);
+                        libro.Año = reader.GetString(2);
+                        libro.Editorial = reader.GetString(3);
+                        libro.Autor = reader.GetString(4);
+                        libro.ISBN = reader.GetString(5);
+                        libro.ID_CATEGORIA = reader.GetInt32(6);
+                    }
+
                     connection.Close();
 
-                    return reader;
+                    return libro;
                 }
                 catch (Exception)
                 {

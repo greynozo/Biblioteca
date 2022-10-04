@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Biblioteca.Controlador;
+using System.Web.WebSockets;
 
 namespace Biblioteca
 {
@@ -23,11 +24,19 @@ namespace Biblioteca
             }
         }
 
-        private static void TraerLibro(string id)
+        public void TraerLibro(string id)
         {
-            SqlDataReader reader = null;
+            //SqlDataReader reader = null;
 
-            reader = ControladorModificar.BuscarLibro(id);
+            ClaseLibro libro = new ClaseLibro();
+
+            libro = ControladorModificar.BuscarLibro(id);
+
+            txtNombre.Text = libro.Nombre;
+            txtAutor.Text = libro.Autor;
+            txtISBN.Text = libro.ISBN;
+            txtEditorial.Text = libro.Editorial;
+            txtAño.Text = libro.Año;
 
         }
     }
