@@ -9,8 +9,8 @@ using System.Configuration;
 using System.Data.Odbc;
 using Biblioteca.Controlador;
 
-namespace Biblioteca
-{
+namespace Biblioteca 
+
     public partial class Inicio : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
